@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student performance Predictor</title>
+
+    <!-- D3 -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/app/DAtaVerse-CSS/insight.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/docs/stubysub.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exploratory Data Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars_HS" aria-controls="navbars_HS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbars_HS">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/our_team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/insight.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/COVID_Predictor">COVID-19 Risk Wizard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2 style="font-family: cursive; text-align:center">Study Habits and Support Analysis</h2>
+    <!-- Insight Navigation -->
+    <div class="insight-navigation">
+        <div class="insight-section" id="insight">
+            <a href="/app/DataVerse-HTML/insight.html">
+                <button>Insight 1</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight2">
+            <a href="/app/DataVerse-HTML/other_insight/insight2.html">
+                <button>Insight 2</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight3">
+            <a href="/app/DataVerse-HTML/other_insight/insight3.html">
+                <button>Insight 3</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight4">
+            <a href="/app/DataVerse-HTML/other_insight/insight4.html">
+                <button>Insight 4</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight6">
+            <a href="/app/DataVerse-HTML/other_insight/insight6.html">
+                <button>Insight 6</button>
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- First Graph -->
+    <div class="figure1_container">
+        <div id="residence_title">Distribution of Study Hours per Week</div>
+        <div id="residence_pie"><img src="/docs/distschhrs.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>The data shows that most students (61) study for less than 5 hours per week, which could suggest that a large portion of students might not be dedicating enough time to their studies.
+                <br>
+                Only a small number of students (5) study for more than 15 hours per week, indicating a lack of intensive study habits overall. This could potentially impact academic performance, especially for subjects requiring more consistent focus and time.</span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Average Science Score (Mapped Categories)</div>
+      <div id="residence_pie"><img src="/docs/distavgs.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample2">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>The analysis reveals the following average science scores based on study hours per week:
+                <br>
+                From this, we can infer that students who study more than 10 hours per week have the highest average score, indicating a positive correlation between increased study hours and performance. Conversely, students studying less than 5 hours have lower average scores, suggesting that insufficient study time may hinder academic success.
+                <br>
+                It's important to note that the "Less than 5 hours" category has a significant representation in the data. This could skew the overall results, as a larger number of students in this group might dilute the performance metrics. Therefore, while the data shows a trend, it would be prudent to investigate further how these study habits impact various performance levels across different groups of students.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Average Commercial Score (Mapped Categories)</div>
+      <div id="residence_pie"><img src="/docs/distavgcoms.png" style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample3">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>
+                <b>Visit Notebook In GitHub To Understanding The Floating Values Used</b>
+                    <br>
+                From these results, we can infer that students studying more than 15 hours per week achieve the highest average commercial score (4.60), indicating a positive relationship between extended study time and academic performance. Conversely, students studying more than 10 hours have a notably lower average score (2.40), suggesting that simply increasing study hours does not guarantee improved performance.
+                <br>
+                <br>
+                This indicates that the effectiveness of study time may depend on factors such as study techniques and engagement during study sessions. Additionally, the "Less than 5 hours" group, despite lower overall study time, achieves a moderate score (3.35), highlighting the potential for effective study strategies within limited timeframes.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Average Humanities Score (Mapped Categories)</div>
+      <div id="residence_pie"><img src="/docs/humavgcoms.png" style ="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample4">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Top Performers:
+                <br>
+                Students studying 5 - 10 hours and more than 15 hours both achieved the highest average score of 3.80.
+                Mid-range Performance:
+                <br>
+                Students studying less than 5 hours scored an average of 3.56, indicating minimal study can yield reasonable results.
+                <br>
+                Lowest Performance:
+                <br>
+                The more than 10 hours group had the lowest average score of 3.36, suggesting that increased study time doesn't always lead to better performance.
+                <br>
+                Implications for Study Habits:
+                <br>
+                <br>
+                A balanced study schedule of 5 - 10 hours is optimal for high scores.
+                Focus on effective study strategies rather than merely increasing study hours.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Average Last Exam Performance by Extra Tutoring Participation</div>
+      <div id="residence_pie"><img src="/images/last.PNG"; style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample5">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>There appears to be a positive correlation between the frequency of extra tutoring and last exam scores.
+                <br>
+                This suggests that increased engagement in tutoring may contribute to improved academic performance.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Analyzing the Impact of Tutoring on Student Confidence in Academic Ability</div>
+      <div id="residence_pie"><img src="/docs/avgconf.png" style="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample6">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>The data suggests that while there is a slight positive trend in confidence scores with more frequent tutoring, the differences are not substantial among the categories studied.
+                <br>
+                The average confidence scores hover around the neutral level (2.5), indicating that the overall confidence in academic ability among students is relatively moderate, regardless of tutoring frequency
+                <br>
+                Additional factors, such as the quality of tutoring, subject matter, and individual student differences, may play a role in influencing academic confidence.
+            </span>
+        </div>
+    </div>
+
+    
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      
+    </div>
+    
+
+    
+</body>
+</html>

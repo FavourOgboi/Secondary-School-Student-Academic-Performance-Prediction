@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student performance Predictor</title>
+
+    <!-- D3 -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/app/DAtaVerse-CSS/insight.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/docs/stubysub.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exploratory Data Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars_HS" aria-controls="navbars_HS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbars_HS">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/our_team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/insight.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/COVID_Predictor">COVID-19 Risk Wizard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2 style="font-family: cursive; text-align:center">Parental Involvement Analysis</h2>
+    <!-- Insight Navigation -->
+    <div class="insight-navigation">
+        <div class="insight-section" id="insight">
+            <a href="/app/DataVerse-HTML/insight.html">
+                <button>Insight 1</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight2">
+            <a href="/app/DataVerse-HTML/other_insight/insight2.html">
+                <button>Insight 2</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight3">
+            <a href="/app/DataVerse-HTML/other_insight/insight3.html">
+                <button>Insight 3</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight4">
+            <a href="/app/DataVerse-HTML/other_insight/insight4.html">
+                <button>Insight 4</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight5">
+            <a href="/app/DataVerse-HTML/other_insight/insight5.html">
+                <button>Insight 5</button>
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- First Graph -->
+    <div class="figure1_container">
+        <div id="residence_title">How do different levels of parent education influence students' academic performance?</div>
+        <div id="residence_pie"><img src="/images/images.PNG" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>
+                The data suggests that higher parental education levels correlate with better academic performance among students. As parental education increases, the likelihood of students achieving higher scores also increases. Conversely, students whose parents have no formal education tend to have poorer performance. 
+                <br><br>
+                This analysis can help inform educational strategies and interventions aimed at improving student outcomes based on family background.</span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Do higher parental education levels result in greater involvement in students' education and homework assistance?</div>
+      <div id="residence_pie"><img src="/images/new.PNG" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample2">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>The analysis indicates a clear trend: higher parental education levels correlate with greater involvement in homework assistance. 
+                <br>
+                However, even among educated parents, the frequency of help can vary. Efforts for parents, especially those with no formal education, may enhance student academic outcomes.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">How does living situation (e.g., with parents, guardians, or alone) influence academic performance?</div>
+      <div id="residence_pie"><img src="/docs/exmbyliving.png" style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample3">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span><b>High Achievers</b>: Students living with both parents are more likely to achieve high scores, with significant numbers in the top performance bracket (70% - 100%).
+                <br>
+                <b>Low Performers</b>: The guardian group has the least number of high achievers, suggesting they struggle to provide the same level of academic support as parents. <br>
+                <b>Risk Factors</b>: Single-parent households show varied performance, indicating that while some students succeed, others may face obstacles that hinder their academic performance.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">How does family financial status impact students' access to resources (like tutoring and learning materials)?</div>
+      <div id="residence_pie"><img src="/images/sta.PNG" style ="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Average Resource Count by Family Financial Status</div>
+      <div id="residence_pie"><img src="/images/never.PNG"; style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample5">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            There is a clear relationship between Family Financial Status and resource availability. Financially stable families provide better access to learning resources, while lower financial standings hinder educational achievements. 
+            <br>
+            This insight can guide interventions aimed at improving resource accessibility for students from less financially stable backgrounds.
+        </div>
+    </div>
+
+    
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+     
+    </div>
+    
+
+    <div class="additional-analysis">
+        For other analysis that isn't included here, <a href="https://github.com/FavourOgboi/Student-Academic-Performance-Prediction/blob/main/notebook/Exploratory-data-analysis" target="_blank">visit GITHUB</a>.
+    </div>
+    
+</body>
+</html>

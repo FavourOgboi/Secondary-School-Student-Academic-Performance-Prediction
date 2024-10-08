@@ -1,0 +1,118 @@
+/* General styles for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar.navbar-dark.bg-dark {
+    width: 100%;
+}
+
+/* Main card styles */
+.main-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.main-card:hover {
+    transform: scale(1.05);
+}
+
+/* Sub-card styles */
+.sub-card {
+    padding: 20px;
+}
+
+/* Profile image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #e9ecef; /* Adds a slight border around the image */
+}
+
+/* Heading styles */
+h3 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.icon:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .main-card {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}

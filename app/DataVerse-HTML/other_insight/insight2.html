@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student performance Predictor</title>
+
+    <!-- D3 -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/app/DAtaVerse-CSS/insight.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/docs/stubysub.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exploratory Data Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars_HS" aria-controls="navbars_HS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbars_HS">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/our_team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/insight.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/COVID_Predictor">COVID-19 Risk Wizard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2 style="font-family: cursive; text-align:center">Academic Performance Analysis</h2>
+    <!-- Insight Navigation -->
+    <div class="insight-navigation">
+        <div class="insight-section" id="insight">
+            <a href="/app/DataVerse-HTML/insight.html">
+                <button>Insight 1</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight2">
+            <a href="/app/DataVerse-HTML/other_insight/insight3.html">
+                <button>Insight 3</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight3">
+            <a href="/app/DataVerse-HTML/other_insight/insight4.html">
+                <button>Insight 4</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight5">
+            <a href="/app/DataVerse-HTML/other_insight/insight5.html">
+                <button>Insight 5</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight6">
+            <a href="/app/DataVerse-HTML/other_insight/insight6.html">
+                <button>Insight 6</button>
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- First Graph -->
+    <div class="figure1_container">
+        <div id="residence_title">Are there specific classes where students tend to perform better or worse?</div>
+        <div id="residence_pie"><img src="/docs/performdist.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Overall, as students progress from SS1 to SS3, there is a clear trend of increasing academic performance, particularly evident in the 70% - 100% category. SS2 stands out with the highest proportion of students achieving top scores, while SS3 maintains this trend with only a minimal percentage of students scoring below 40%.</span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Distribution of Last Exam Performance by Academic Department</div>
+      <div id="residence_pie"><img src="/docs/performancenyacad.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample2">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Across all departments, 50% of students fall within the different performance categories, indicating a consistent level of performance across disciplines.
+                <br>
+            The 60% - 69% range comprises 19.5% of students, which highlights an opportunity for educational support to enhance performance levels.
+                <br>
+            The analysis suggests that while the Commercial Department has the highest proportion of high achievers, all departments show significant room for improvement, particularly in addressing the needs of lower-performing students. Targeted interventions may be beneficial to uplift students across all performance categories.
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Student Performance by Subject: Science</div>
+      <div id="residence_pie"><img src="/docs/stubysub.png" style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample3">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Chemistry poses the greatest challenge, with 9.62% of students performing Poorly. <br>
+                All other subjects, including English, Biology, Physics, and Maths, have relatively low Poor performance levels, with each subject at 1.92% or lower.
+                <br>
+                <b>Conclusion:</b>
+                Students generally perform well in Biology and English, with high percentages in the Good category.
+                <br>
+                Maths has a notable concentration of students in the Excellent category, while <b>Chemistry presents the most difficulty, with the highest Poor performance rate.</b>
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Student Performance by Subject: ART/Humanities</div>
+      <div id="residence_pie"><img src="/docs/stuartsub.png" style ="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample4">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>There are no students performing Poorly in Literature in English, Government, or Christian Religious Studies (CRS). <br>
+                Maths has 4.88% of students in the Poor performance category, showing that a small percentage of learners struggle significantly. <br>
+                <b>Conclusion:</b>
+                Students show commendable performance in Literature in English and CRS, with high percentages in the Good and Excellent categories. <br>
+                Maths presents some challenges, particularly with a significant proportion of students rated as Fair and a small percentage classified as Poor. <br>
+                Overall, while performance is generally strong in the Humanities, there is potential for targeted support in Maths to enhance student outcomes.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Student Performance by Subject: Commercial</div>
+      <div id="residence_pie"><img src="/docs/stucomer.png"; style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5">
+        Click to view details below!
+    </button>
+
+    <div class="collapse" id="collapseExample5">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Accounting, Economics, and Maths have 14.29% of students rated as Poor, indicating significant challenges faced by some students in these subjects. <br>
+                There are no students performing Poorly in Commerce or English, which is a positive indicator of student performance in these areas.
+            </span>
+        </div>
+    </div>
+    
+    <!-- Second Graph -->
+    <div class="figure1_container">
+        
+    </div>
+
+</body>
+<html>

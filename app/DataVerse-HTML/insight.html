@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student performance Predictor</title>
+
+    <!-- D3 -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/app/DAtaVerse-CSS/insight.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/docs/stubysub.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exploratory Data Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars_HS" aria-controls="navbars_HS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbars_HS">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/our_team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/insight.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/COVID_Predictor">COVID-19 Risk Wizard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2 style="font-family: cursive; text-align:center">Demographics and Background Analysis</h2>
+    <!-- Insight Navigation -->
+    <div class="insight-navigation">
+      <div class="insight-section" id="insight2">
+          <a href="/app/DataVerse-HTML/other_insight/insight2.html">
+              <button>Insight 2</button>
+          </a>
+      </div>
+      <div class="insight-section" id="insight3">
+          <a href="/app/DataVerse-HTML/other_insight/insight3.html">
+              <button>Insight 3</button>
+          </a>
+      </div>
+      <div class="insight-section" id="insight4">
+          <a href="/app/DataVerse-HTML/other_insight/insight4.html">
+              <button>Insight 4</button>
+          </a>
+      </div>
+      <div class="insight-section" id="insight5">
+          <a href="/app/DataVerse-HTML/other_insight/insight5.html">
+              <button>Insight 5</button>
+          </a>
+      </div>
+      <div class="insight-section" id="insight6">
+          <a href="/app/DataVerse-HTML/other_insight/insight6.html">
+              <button>Insight 6</button>
+          </a>
+      </div>
+    </div>
+  
+
+    <!-- First Graph -->
+    <div class="figure1_container">
+        <div id="residence_title">The number of male and female students interviewed.</div>
+        <div id="residence_pie"><img src="/docs/gender_distribution.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>From the data, we observe that the number of female students interviewed (65) is significantly higher than that of male students (35).</span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">The distribution of students interviewed across different grades (SS1 - SS3)</div>
+      <div id="residence_pie"><img src="/docs/grade_distribution_pie_chart.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample2">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>The dataset includes 100 students from various grades, specifically SS1, SS2, and SS3. Upon analyzing the data, we observe the following breakdown:
+              <ul>
+                <li>SS3 : 68 students</li>
+                <li>SS2 : 17 students</li>
+                <li>SS1 : 15 students</li>
+              </ul>
+            Often observed in some schools, where senior classes tend to have larger populations, possibly due to retention and incoming transfers.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">The representation of students from various departments.</div>
+      <div id="residence_pie"><img src="/docs/department_distribution_bar_chart.png" style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample3">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>It's important to note that this dataset was collected with careful consideration to ensure its authenticity. No artificial intelligence-generated data was used to inflate or skew the results. Every effort was made to maintain the integrity of the dataset, adhering to the 50 instructions set for data collection. This allows us to draw genuine and reliable insights into student performance and demographics, preserving the genuineness and real-world applicability of the data.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Gender-wise: Student Count by Performance in English</div>
+      <div id="residence_pie"><img src="/docs/English_performance_gender.png" style ="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample4">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Female students dominate the "Excellent" performance group in English, with 24 students (compared to 11 male students).
+              This might be expected given the larger number of females in the dataset, but it still suggests a strong performance in English from females.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Gender-wise: Student Count by Performance in Maths</div>
+      <div id="residence_pie"><img src="/docs/Maths_performance_gender.png"; style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample5">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Male students show a more consistent performance in Maths, especially in the "Excellent" and "Good" categories. There are 12 male students who performed "Excellent" in Maths, compared to 14 female students in the same category.
+              <br>
+            While more female students are represented in Maths, many fall into the "Fair" and "Good" categories, indicating more variability in their performance compared to males.
+            <br>
+            Male students, despite being fewer in number, tend to be more consistent, particularly in Maths, where they cluster more in the "Good" and "Excellent" performance levels.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Performance of Science Students by Gender</div>
+      <div id="residence_pie"><img src="/docs/sciencecourses-gender-performance.png" style="width: 60%; height: auto;" alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample6">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span><b>Biology</b>: Majority of students are performing well, with notable counts in the Excellent and Good categories.
+              <br>
+              <b>Physics</b>: The Performance shows a more varied distribution, indicating some students may struggle more in this subject compared to Biology and Chemistry.
+              <br>
+              <b>Chemistry</b>: Just like Biology, there are significant numbers of students achieving Excellent and Good performance. Comparative Analysis:
+              <br>
+              The number of male and female students shows that female students tend to be represented more in certain performance categories, particularly in Biology.
+              <br>
+              There are instances of higher student counts for females in the "Good" performance category across subjects, indicating a strong overall performance by female students.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Performance of Humanities Students by Gender</div>
+      <div id="residence_pie"><img  src="/docs/humanitiescourses-gender-performance.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample7">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample7">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>A considerable number of female students (11 out of 30) achieved Excellent performance across all subjects: Lit in English, Government, and CRS.
+              <br>
+              Male students displayed varied performances, with 4 students achieving Excellent ratings in multiple subjects.
+              <br>
+              <b>Notable Patterns</b>:Females generally performed better, with a higher count of Excellent ratings compared to males.
+              This analysis suggests that female students excel in Humanities.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Performance of Commercial Students by Gender</div>
+      <div id="residence_pie"><img src="/docs/commercialcourses-gender-performance.png" style="width: 60%; height: auto"; alt="";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample8">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample8">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>Among the commercial students interviewed, females showed a strong performance, with multiple students achieving Excellent ratings in subjects such as Commerce, Accounting, and Economics.
+              <br>
+              The analysis included a total of six students, and the results indicated a mix of performance levels. Notably, one male student achieved an Excellent rating in Economics, while receiving Fair ratings in both Commerce and Accounting.
+              <br>
+              <b>Note</b>: The sample size for the commercial students was limited, which may affect the generalizability of these insights. A more extensive dataset would provide a clearer understanding of performance trends within this department.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Percentage of Female Participation in Extracurricular Activities</div>
+      <div id="residence_pie"><img src="/docs/PercentageFemaleExtra-gender-performance.png" alt="" style="width: 50%; height: auto;"></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample9">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample9">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>These results indicate that a significant proportion of females (43.1%) engage in extracurricular activities occasionally, while a notable 38.5% participate regularly. <b>This suggests that females are moderately involved in extracurricular activities</b>, which can enhance their social skills and overall well-being. However, the 18.5% who do not participate at all could reflect barriers or disinterest that may need to be addressed to foster greater involvement.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Percentage of Male Participation in Extracurricular Activities</div>
+      <div id="residence_pie"><img src="/docs/PercentageMaleExtra-gender-performance.png" alt="" style="width: 50%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample10">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample10">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>In contrast, a majority of males (57.1%) participate regularly, while only 11.4% do not participate at all. This indicates a strong tendency among males to engage in extracurricular activities, which can be linked to various benefits such as teamwork, leadership skills, and enhanced academic performance.
+              <br>
+              <b>This comparison highlights that while females may be more inclined to dip into activities occasionally, males tend to commit to these activities more regularly.</b>
+            </span>
+        </div>
+      </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Foundational Knowledge Across Age Group</div>
+      <div id="residence_pie"><img src="/docs/Ageknowledge.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample10">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample10">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span>In the 15 - 16 age group, most students are doing well. 34 students show a Strong understanding of their subjects, while 32 are rated as Average. But there are still 6 students who are Weak, and that raises a red flag.
+              <br>
+              For the younger group, 12 - 14, things look less encouraging. Only 4 students have a Strong grasp, while 14 are Average and 5 are Weak. This is concerning because these foundational years are so important for their future.
+              <br>
+              The 17 - 18 paints a picture. Here, we find only 3 students who are Average, and just 1 student each rated as Strong and Weak.
+              <br>
+              <b>It shows that as students get older, those who struggled earlier may continue to lag behind.</b>
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Performance in subjects by Age Group: Jupyter Insight</div>
+      <div id="residence_pie"><img src="/images/jupyter.PNG" alt="" style="width: 60%; height: auto";></div>
+    </div>
+    
+
+    
+</body>
+</html>

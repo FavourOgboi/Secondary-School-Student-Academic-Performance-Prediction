@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student performance Predictor</title>
+
+    <!-- D3 -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/app/DAtaVerse-CSS/insight.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/docs/stubysub.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exploratory Data Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars_HS" aria-controls="navbars_HS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbars_HS">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/our_team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/DataVerse-HTML/insight.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/COVID_Predictor">COVID-19 Risk Wizard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2 style="font-family: cursive; text-align:center">School Attendance and Extracurricular Activities Analysis</h2>
+    <!-- Insight Navigation -->
+    <div class="insight-navigation">
+        <div class="insight-section" id="insight">
+            <a href="/app/DataVerse-HTML/insight.html">
+                <button>Insight 1</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight2">
+            <a href="/app/DataVerse-HTML/other_insight/insight2.html">
+                <button>Insight 2</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight3">
+            <a href="/app/DataVerse-HTML/other_insight/insight4.html">
+                <button>Insight 4</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight5">
+            <a href="/app/DataVerse-HTML/other_insight/insight5.html">
+                <button>Insight 5</button>
+            </a>
+        </div>
+        <div class="insight-section" id="insight6">
+            <a href="/app/DataVerse-HTML/other_insight/insight6.html">
+                <button>Insight 6</button>
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- First Graph -->
+    <div class="figure1_container">
+        <div id="residence_title">School Attendance vs Last Exam Performance</div>
+        <div id="residence_pie"><img src="/docs/1.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+     
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span><b>Positive Impact of Daily Attendance: View Jupyter For Value Understanding</b>
+                <br>
+                <b>Students who attended school every day</b> had the highest average exam performance score of 3.29. This suggests a strong positive correlation between consistent school attendance and higher academic achievement. Moderate Performance with Less Frequent Attendance:
+                <br>
+                <b>Students who attended school on most days</b> had an average score of 3.00, indicating slightly lower performance compared to daily attendees. This implies that occasional absences may slightly reduce academic performance. Significant Drop with Occasional Attendance:
+                
+                <b>Students who attended school occasionally</b> had the lowest average score of 2.20, showing a notable drop in performance. This highlights that inconsistent attendance is linked to poorer academic outcomes.
+                
+                Regular school attendance appears to be crucial for better academic performance, with students attending every day outperforming those with less consistent attendance.</span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Extracurricular Participation vs Last Exam Performance</div>
+      <div id="residence_pie"><img src="/docs/2.png" alt="" style="width: 60%; height: auto";></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample2">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span><b>Highest Performance with Regular Participation</b>:
+                <br>
+                Students who participated in extracurricular activities regularly achieved the highest average exam score of 3.29. This suggests that consistent involvement in extracurricular activities may enhance academic performance, possibly due to better time management and balanced personal development.
+                <br>
+                <b>Moderate Performance with Occasional Participation</b>:
+                <br>
+                Students who participated occasionally had an average score of 3.18, which is slightly lower than regular participants but still indicates a positive correlation between involvement in extracurricular activities and academic success.
+                <br>
+                <b>Lowest Performance for Non-participants</b>:
+                <br>
+                Students with no participation in extracurricular activities had the lowest average score of 3.13. This suggests that not engaging in extracurriculars might slightly reduce academic performance compared to those who participate, even occasionally.
+                <br>
+                Conclusion: Regular involvement in extracurricular activities seems to correlate with improved academic outcomes, indicating that students benefit from a balanced routine of academics and extracurricular pursuits.
+            </span>
+        </div>
+    </div>
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      <div id="residence_title">Extracurricular Hours vs Last Exam Performance</div>
+      <div id="residence_pie"><img src="/docs/department_distribution_bar_chart.png" style="width: 60%; height: auto"; alt=""></div>
+    </div>
+
+    <!-- Text collapse button -->
+    <button class="btn btn-primary info_card_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3">
+        Click to view details below!
+    </button>
+    <div class="collapse" id="collapseExample3">
+        <div class="card-footer" style="background-color: #a5e2fe;">
+            <span><b>Highest Performance with Less than 5 Hours:</b>
+                <br>
+                Students who spent less than 5 hours in extracurricular activities per week achieved the highest average exam score of 3.30. This suggests that limited involvement in extracurricular activities, allowing more focus on academics, may positively impact performance.
+                <br>
+                <b>Moderate Performance with 5 - 10 Hours</b>:
+                <br>
+                Students who spent 5 to 10 hours on extracurricular activities per week had a slightly lower average score of 3.22, indicating a balance between extracurriculars and academics can still support solid academic outcomes.
+                <br>
+                <b>Lowest Performance with More than 10 Hours:</b>
+                <br>
+                Students who participated in extracurricular activities for more than 10 hours per week had the lowest average score of 2.94. This may suggest that excessive involvement in non-academic activities could hinder academic performance, possibly due to time constraints or burnout.
+                <br>
+                Conclusion: While some level of extracurricular participation appears beneficial, too many hours devoted to extracurriculars might negatively affect academic performance. A balanced approach is key.
+            </span>
+        </div>
+    </div>
+
+
+    <!-- Second Graph -->
+    <div class="figure1_container">
+      
+    </div>
+    
+</body>
+</html>
