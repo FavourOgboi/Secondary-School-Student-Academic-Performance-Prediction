@@ -19,6 +19,8 @@ During my visits, I interviewed **100 students** who were provided with a questi
 ## Folder Arrangement
 
 The project folder is organized as follows:
+
+```
 MLmodel
   ├── .ipynb_checkpoints 
   ├── model.ipynb 
@@ -79,7 +81,7 @@ app
     |______ 6 lot of ipynb folders for 6 diffrent insight categories, in each folder there are ipynb files
     │     
     └── Processing-data.ipynb
-
+```
 
 ## Database Structuring
 
