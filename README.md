@@ -94,6 +94,103 @@ app
     └── Processing-data.ipynb
 ```
 ***
+
+# Exploratory Data Analysis (EDA) Questions
+
+### Demographics
+- How does gender distribution compare across different classes and departments?
+- What are the age group distributions for the student population?
+- Are there significant trends in academic performance across different age groups?
+
+### Living Situation
+- How does living situation (e.g., with parents, guardians, or alone) influence academic performance?
+- Do students living in different conditions (urban vs. rural) exhibit significant performance differences?
+
+### Family Financial Status
+- How does family financial status impact students' access to resources (like tutoring and learning materials)?
+- Are there performance disparities based on family financial status?
+
+### Parental Involvement
+- Do students whose parents attend parent-teacher meetings perform better academically?
+- Is there a correlation between parental encouragement for higher education and student motivation to attend university?
+- Does the level of parental help with homework correlate with better performance in subjects?
+
+### Extracurricular Activities
+- Does participation in extracurricular activities correlate with higher or lower academic performance?
+- How does the number of hours spent in extracurricular activities impact students' academic success?
+
+### Attendance and Study Habits
+- How does school attendance impact academic performance?
+- Is there a correlation between study hours per week and performance in key subjects like Maths, Biology, and English?
+- Do students who attend extra tutoring perform better than those who don't?
+
+### Stress, Motivation, and Mental Well-being
+- How does stress about schoolwork correlate with student performance?
+- Does motivation for attending school influence academic success?
+- Do students who have access to counseling services perform better?
+- Is there a relationship between confidence in academic ability and actual performance?
+
+### Bullying and Peer Influence
+- Do students who experience bullying show poorer academic performance?
+- How does peer pressure affect performance in different subjects?
+
+### Academic Performance Across Subjects
+- Which subject do students perform best in, and which subject poses the most challenges?
+- Are there correlations between performances in different subjects (e.g., does performance in English correlate with performance in Literature)?
+- Are there specific classes where students tend to perform better or worse across different subjects?
+
+### Planned Future Endeavors
+- How does last exam performance correlate with planned future academic endeavors (e.g., planning to attend university)?
+- Is there a relationship between a student's JAMB goal score and their current academic performance?
+
+### Psychological and Social Factors
+- How do students who express a desire to drop out perform compared to others?
+- Does participation in extracurricular activities or peer relationships influence the decision to consider dropping out?
+
+### Language and Cultural Background
+- Is there a difference in academic performance based on the primary language spoken at home?
+- Do students who are involved in work outside of school perform differently from those who aren't?
+
+- 
+***
+### SOME VISUALS 
+
+<table>
+  <tr>
+    <td><img src="/docs/performdist.png" alt="Image 1" width="200"/></td>
+    <td><img src="/docs/department_distribution_bar_chart.png" alt="Image 2" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="/docs/avgconf.png" alt="Image 3" width="200"/></td>
+    <td><img src="/docs/go.PNG" alt="Image 4" width="200"/></td>
+  </tr>
+</table>
+
+**IMPACT ON GENDER:**
+Students who experience bullying frequently tend to have lower performance scores compared to those who have never been bullied. This suggests that experiencing bullying can have a detrimental effect on academic performance, as reflected by a higher proportion of students scoring in lower performance brackets among those frequently bullied.
+
+**BULLYING DEMOGRAPHICS:**
+Female students who are frequently bullied are more likely to come from families that struggle to meet basic needs compared to other financial statuses. Conversely, male students show a tendency to experience bullying less frequently than females across all financial statuses, especially those who are financially comfortable.
+Both genders show that those who experience bullying less frequently tend to have higher counts in the "Never" category, indicating that financial stability might play a role in the prevalence of bullying experiences.
+
+**ACADEMIC PERFORMANCE ACROSS CLASSES:**
+As students progress from SS1 to SS3, there is a clear trend of increasing academic performance, particularly evident in the 70% - 100% category. SS2 stands out with the highest proportion of students achieving top scores, while SS3 maintains this trend with only a minimal percentage of students scoring below 40%.
+
+**EXTRACURRICULAR ACTIVITIES AND PERFORMANCE:**
+
+- **Highest Performance with Less than 5 Hours:**
+  Students who spent less than 5 hours in extracurricular activities per week achieved the highest average exam score of 3.30. This suggests that limited involvement in extracurricular activities, allowing more focus on academics, may positively impact performance.
+
+- **Moderate Performance with 5 - 10 Hours:**
+  Students who spent 5 to 10 hours on extracurricular activities per week had a slightly lower average score of 3.22, indicating a balance between extracurriculars and academics can still support solid academic outcomes.
+
+- **Lowest Performance with More than 10 Hours:**
+  Students who participated in extracurricular activities for more than 10 hours per week had the lowest average score of 2.94. This may suggest that excessive involvement in non-academic activities could hinder academic performance, possibly due to time constraints or burnout.
+
+**Conclusion:**
+While some level of extracurricular participation appears beneficial, too many hours devoted to extracurriculars might negatively affect academic performance. A balanced approach is key.
+
+***
 # DASHBOARD - ANALYST ZARA
 ![Example Image](/images/dashboard.jpeg)
 ***
