@@ -1,4 +1,4 @@
-# Student-Academic-Performance-Prediction
+# Student-Academic-Performance-Analysis-And-Insights
 
 ![Example Image](/images/student.jpeg)
 ### TEAM DATAVERSE
