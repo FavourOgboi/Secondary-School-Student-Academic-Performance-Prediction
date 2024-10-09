@@ -151,7 +151,6 @@ app
 - Is there a difference in academic performance based on the primary language spoken at home?
 - Do students who are involved in work outside of school perform differently from those who aren't?
 
-- 
 ***
 ### SOME VISUALS 
 
