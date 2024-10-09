@@ -16,7 +16,7 @@ The dataset used for this project was collected from various educational institu
 3. **Private School - Tiakod College**
 
 During my visits, we interviewed **100 students** who were provided with a questionnaire to fill out. While some schools did not permit data collection, these three institutions facilitated the process by allowing us to gather valuable insights.
-![Form](/images/form.jpeg)
+![Form](/images/formimg.jpeg)
 
 
 ## 3. TOOLS/SKILLS UTILIZED AND ANALYST
