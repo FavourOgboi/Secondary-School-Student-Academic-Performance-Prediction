@@ -95,7 +95,7 @@ app
 ```
 ***
 
-# Exploratory Data Analysis (EDA) Questions
+# Some Exploratory Data Analysis (EDA) Questions
 
 ### Demographics
 - How does gender distribution compare across different classes and departments?
@@ -165,6 +165,8 @@ app
     <td><img src="/docs/go.PNG" alt="Image 4" width="200"/></td>
   </tr>
 </table>
+
+### SOME INSIGHT GOTTEN
 
 **IMPACT ON GENDER:**
 Students who experience bullying frequently tend to have lower performance scores compared to those who have never been bullied. This suggests that experiencing bullying can have a detrimental effect on academic performance, as reflected by a higher proportion of students scoring in lower performance brackets among those frequently bullied.
