@@ -42,16 +42,6 @@ During my visits, we interviewed **100 students** who were provided with a quest
 The project folder is organized as follows:
 
 ```
-MLmodel
-  ├── .ipynb_checkpoints 
-  ├── model.ipynb 
-  ├── test_inputs.parquet 
-  ├── test_targets.parquet 
-  ├── train_inputs.parquet 
-  ├── train_targets.parquet 
-  ├── val_inputs.parquet 
-  └── val_targets.parquet
-
 Schema 
   ├── .ipynb_checkpoints 
   ├── create_db.ipynb 
