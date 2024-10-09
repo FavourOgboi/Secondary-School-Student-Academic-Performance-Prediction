@@ -1,12 +1,17 @@
 # Student-Academic-Performance-Analysis-And-Insights
 
 ![Example Image](/images/student.jpeg)
-### TEAM DATAVERSE
 ***
+### TEAM DATAVERSE
+
 This project analyzes student the African student academic performance based on various factors such as foundational knowledge, study hours, and family background. The goal is to analyse students' academic success and improve educational outcomes by providing valuable insights to educators.
 
-# Project Overview
+**TEAM MEMBERS AND ROLES**
+- GIFT ZARA > DATA ANALYST
+- VINCENT FAVOUR > DATA ANALYST
 
+# Project Overview
+***
 ## 2. Dataset Description
 
 The dataset used for this project was collected from various educational institutions in Ikorodu, comprising both public and private schools. Specifically, we visited the following schools:
@@ -16,8 +21,9 @@ The dataset used for this project was collected from various educational institu
 3. **Private School - Tiakod College**
 
 During my visits, we interviewed **100 students** who were provided with a questionnaire to fill out. While some schools did not permit data collection, these three institutions facilitated the process by allowing us to gather valuable insights.
+***
 ![Form](/images/formimg.jpeg)
-
+***
 
 ## 3. TOOLS/SKILLS UTILIZED AND ANALYST
 - EXCEL - Data Analyst Zara
@@ -28,7 +34,7 @@ During my visits, we interviewed **100 students** who were provided with a quest
 - CSS - Data Analyst Vincet
 - Bootstrap - Data Analyst Vincet
 - INLINE JS - Data Analyst Vincet
-
+***
 ## Folder Arrangement
 
 The project folder is organized as follows:
@@ -95,10 +101,10 @@ app
     │     
     └── Processing-data.ipynb
 ```
-
+***
 # DASHBOARD - ANALYST ZARA
 ![Example Image](/images/dashboard.jpeg)
-
+***
 ## Database Structuring
 
 For this project, We utilized an SQLite database to store the collected data. The database schema was structured to efficiently manage student information and survey responses. I employed **SQLAlchemy** to facilitate the querying of the database, allowing for seamless interaction with the data.
@@ -116,7 +122,7 @@ engine = create_engine(f'sqlite:///{db_path}')
 
 # SNIPPET
 ```
-
+***
 ## Data Pipeline
 
 I built a data pipeline using Python, which was crucial for processing the collected data. This pipeline is located within the GitHub repository and consists of various scripts designed to handle data insertion and transformation tasks.
@@ -142,7 +148,7 @@ def insert_data(db_engine, table_name, data):
 # SNIPPER
 
 ```
-
+***
 ## Data Warehousing
 
 A data warehousing solution was also created using Python, which helped in organizing and managing the data effectively. This warehouse allows for easy access and retrieval of information for analysis.
@@ -163,8 +169,8 @@ df.to_sql('student_performance', con=engine, if_exists='replace', index=False)
 # SNIPPET
 
 ```
-
+***
 ## Web Application Deployment
 
 To present the insights and predictions from the model, we deployed a web application using **Netlify**. Users can access this application to view insights based on the data collected. To assess the app, you can visit the following link: [DataVerse Web Application](https://magical-starburst-aa756b.netlify.app).
-
+***
