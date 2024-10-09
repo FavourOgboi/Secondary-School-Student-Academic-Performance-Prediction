@@ -19,11 +19,66 @@ During my visits, I interviewed **100 students** who were provided with a questi
 ## Folder Arrangement
 
 The project folder is organized as follows:
-MLmodel ├── .ipynb_checkpoints ├── model.ipynb ├── test_inputs.parquet ├── test_targets.parquet ├── train_inputs.parquet ├── train_targets.parquet ├── val_inputs.parquet └── val_targets.parquet
+MLmodel
+  ├── .ipynb_checkpoints 
+  ├── model.ipynb 
+  ├── test_inputs.parquet 
+  ├── test_targets.parquet 
+  ├── train_inputs.parquet 
+  ├── train_targets.parquet 
+  ├── val_inputs.parquet 
+  └── val_targets.parquet
 
-Schema ├── .ipynb_checkpoints ├── create_db.ipynb ├── data_insertion_pipeline.py ├── db-test.ipynb ├── student_database.db └── warehouse_schema_creation.py
+Schema 
+  ├── .ipynb_checkpoints 
+  ├── create_db.ipynb 
+  ├── data_insertion_pipeline.py 
+  ├── db-test.ipynb 
+  |── student_database.db 
+  └── warehouse_schema_creation.py
 
-app ├── DataVerse-CSS │ ├── insight.css │ ├── our_team.css │ └── style.css ├── DataVerse-HTML ├── other_insight │ ├── insight.html │ ├── our_team.html ├── data │ ├── .ipynb_checkpoints │ ├── Survey_Form │ │ ├── QUESTIONAIRE.docx │ │ ├── Raw-Student-Survey-Data.xlsx │ │ ├── processed_survey_data.csv │ │ └── processed_survey_data.xlsx ├── docs │ └── images ├── notebook │ ├── .ipynb_checkpoints │ ├── Exploratory-data-analysis │ └── Processing-data.ipynb
+app 
+  ├── DataVerse-CSS │ 
+      ├── insight.css │ 
+      ├── our_team.css  
+      │ 
+      └── style.css 
+  ├── DataVerse-HTML 
+    ├── other_insight 
+        │ 
+        ├── insight.html 
+        |__ insight2.html To insight6.html Files
+  │ 
+  ├── our_team.html 
+  
+  ├── data │ 
+    ├── .ipynb_checkpoints 
+    │ 
+    ├── Survey_Form 
+    │  
+    │ ├── QUESTIONAIRE.docx 
+    │ 
+    │ 
+    ├── Raw-Student-Survey-Data.xlsx 
+    │ 
+    │ 
+    ├── processed_survey_data.csv 
+    │ 
+    │ 
+    └── processed_survey_data.xlsx 
+    ├── docs 
+    |____ A Lot of Insight PNG and JPG
+    │ 
+    └── images 
+    |_____ A lot of images
+    ├── notebook 
+    │ 
+    ├── .ipynb_checkpoints 
+    │ 
+    ├── Exploratory-data-analysis 
+    |______ 6 lot of ipynb folders for 6 diffrent insight categories, in each folder there are ipynb files
+    │     
+    └── Processing-data.ipynb
 
 
 ## Database Structuring
