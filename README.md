@@ -6,6 +6,8 @@
 
 This project analyzes student the African student academic performance based on various factors such as foundational knowledge, study hours, and family background. The goal is to analyse students' academic success and improve educational outcomes by providing valuable insights to educators.
 
+**NB**: NO DATA WAS GENERATED USING AI TO AVOID SKEWNESS
+
 **TEAM MEMBERS AND ROLES**
 - GIFT ZARA > DATA ANALYST
 - VINCENT FAVOUR > DATA ANALYST
