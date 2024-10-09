@@ -1,5 +1,6 @@
 # Student-Academic-Performance-Prediction
 
+![Example Image](/images/student.jpeg)
 ### TEAM DATAVERSE
 ***
 This project analyzes student academic performance based on various factors such as foundational knowledge, study hours, and family background. The goal is to predict students' academic success and improve educational outcomes by providing valuable insights to educators.
@@ -101,5 +102,5 @@ I developed a prediction model that analyzes the survey data to provide insights
 
 ## Web Application Deployment
 
-To present the insights and predictions from the model, I deployed a web application using **Streamlit**. Users can access this application to view insights and make predictions based on the data collected. To assess the app, you can visit the following link: [DataVerse Web Application](https://magical-starburst-aa756b.netlify.app/app/dataverse-html/other_insight/insight2).
+To present the insights and predictions from the model, I deployed a web application using **Streamlit**. Users can access this application to view insights and make predictions based on the data collected. To assess the app, you can visit the following link: [DataVerse Web Application](https://magical-starburst-aa756b.netlify.app).
 
