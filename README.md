@@ -156,14 +156,13 @@ app
 
 <table>
   <tr>
-    <td><img src="/docs/performdist.png" alt="Image 1" width="200"/></td>
-    <td><img src="/docs/department_distribution_bar_chart.png" alt="Image 2" width="200"/></td>
-  </tr>
-  <tr>
-    <td><img src="/docs/avgconf.png" alt="Image 3" width="200"/></td>
-    <td><img src="/docs/go.PNG" alt="Image 4" width="200"/></td>
+    <td><img src="/docs/performdist.png" alt="Image 1" width="500"/></td>
+    <td><img src="/docs/department_distribution_bar_chart.png" alt="Image 2" width="500"/></td>
   </tr>
 </table>
+
+<img src="/docs/avgconf.png" alt="Image 3" width="1000"/>
+
 
 ### SOME INSIGHT GOTTEN
 
