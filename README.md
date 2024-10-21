@@ -234,7 +234,7 @@ def insert_data(db_engine, table_name, data):
         
         conn.execute(text(sql), tuple(data.values.flatten()))
 
-# SNIPPER
+# SNIPPET
 
 ```
 ***
