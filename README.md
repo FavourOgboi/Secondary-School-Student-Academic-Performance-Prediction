@@ -1,6 +1,8 @@
 # Student-Academic-Performance-Analysis-And-Insights
 
-![Example Image](/images/student.jpeg)
+<p align="center">
+  <img src="/images/student.jpeg" alt="Example Image" width="300"/>
+</p>
 ***
 ### TEAM DATAVERSE
 
@@ -24,7 +26,10 @@ The dataset used for this project was collected from various educational institu
 
 During my visits, we interviewed **100 students** who were provided with a questionnaire to fill out. While some schools did not permit data collection, these three institutions facilitated the process by allowing us to gather valuable insights.
 ***
-![Form](/images/formimg.jpeg)
+<p align="center">
+  <img src="/images/formimg.jpeg" alt="Form" width="300"/>
+</p>
+
 ***
 
 ## 3. TOOLS/SKILLS UTILIZED AND ANALYST
@@ -156,14 +161,13 @@ app
 
 <table>
   <tr>
-    <td><img src="/docs/performdist.png" alt="Image 1" width="200"/></td>
-    <td><img src="/docs/department_distribution_bar_chart.png" alt="Image 2" width="200"/></td>
-  </tr>
-  <tr>
-    <td><img src="/docs/avgconf.png" alt="Image 3" width="200"/></td>
-    <td><img src="/docs/go.PNG" alt="Image 4" width="200"/></td>
+    <td><img src="/docs/performdist.png" alt="Image 1" width="500"/></td>
+    <td><img src="/docs/department_distribution_bar_chart.png" alt="Image 2" width="500"/></td>
   </tr>
 </table>
+
+<img src="/docs/avgconf.png" alt="Image 3" width="1000"/>
+
 
 ### SOME INSIGHT GOTTEN
 
@@ -235,7 +239,7 @@ def insert_data(db_engine, table_name, data):
         
         conn.execute(text(sql), tuple(data.values.flatten()))
 
-# SNIPPER
+# SNIPPET
 
 ```
 ***
