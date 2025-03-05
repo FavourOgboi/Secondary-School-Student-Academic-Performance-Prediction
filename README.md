@@ -11,6 +11,8 @@ This project not only analyzes the academic performance of African secondary sch
 
 We used the analysis to uncover trends and patterns, and we also built a **predictive model** that can forecast future academic achievements, helping educational institutions identify students who may need additional support.
 
+This app also provides personalized recommendations based on student performance in different subjects and departments.
+
 **Note**: No data was generated using AI to avoid skewness.
 
 **TEAM MEMBERS AND ROLES**
