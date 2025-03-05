@@ -131,3 +131,146 @@ if submitted:
         
         prediction = predict_input(model, input_data, categorical_cols, encoder)
         st.success(f"Predicted Performance: {prediction}")
+
+        if prediction:
+
+            # Recommendation System
+            st.write("## 📌 Personalized Recommendations")
+
+            recommendations = []
+
+            # Study Hours
+            if study_hours == "Less than 5 hours":
+                recommendations.append("📖 Increase your study hours to at least 5-10 hours per week to improve performance.")
+            elif study_hours == "5 - 10 hours":
+                recommendations.append("📚 Consider increasing study hours beyond 10 hours per week for better results.")
+            elif study_hours == "More than 10 hours":
+                recommendations.append("✅ Your study hours are good! Ensure they are well-structured and effective.")
+
+            # Living Situation
+            if living_situation == "Single parent":
+                recommendations.append("💡 Seek additional support from teachers or counselors to bridge any gaps in academic support at home.")
+            elif living_situation == "Guardian":
+                recommendations.append("🏡 Ensure you communicate any academic challenges with your guardian for better guidance.")
+
+            # School Attendance
+            if attendance == "Occasionally":
+                recommendations.append("🚀 Improve your school attendance for better understanding of subjects.")
+            elif attendance == "Most days":
+                recommendations.append("📅 Regular attendance is key! Try not to miss important lessons.")
+            elif attendance == "Every day":
+                recommendations.append("✅ Great job attending school every day! Stay focused and engaged in lessons.")
+
+            # Confidence in Academic Ability
+            if confidence == "Not confident":
+                recommendations.append("💪 Build confidence by practicing more, seeking help from teachers, and joining study groups.")
+            elif confidence == "Somewhat confident":
+                recommendations.append("🔎 Keep improving your skills and test yourself regularly to boost confidence.")
+            elif confidence == "Confident":
+                recommendations.append("🌟 Keep up the good work! Use your confidence to help others and improve further.")
+
+            # Parental Involvement
+            if parent_meeting == "Never":
+                recommendations.append("👨‍👩‍👦 Encourage your parents to attend meetings for better involvement in your academics.")
+            elif parent_meeting == "Sometimes":
+                recommendations.append("📢 Regular parental involvement can help in tracking progress. Discuss your academics at home.")
+            elif parent_meeting == "Regularly":
+                recommendations.append("✅ Having parents involved is great! Keep them updated on your progress.")
+
+            # Access to Counseling
+            if counseling == "No":
+                recommendations.append("🗣 Consider seeking guidance from a teacher or mentor to help with academic and personal challenges.")
+
+            # Motivation
+            if motivation in ["To meet family expectations", "To avoid being bored at home"]:
+                recommendations.append("🎯 Try to develop a personal passion for learning beyond external pressures.")
+
+            # Extra Tutoring
+            if extra_tutoring == "No":
+                recommendations.append("📚 Consider extra tutoring sessions to strengthen your understanding of subjects.")
+            elif extra_tutoring == "Occasionally":
+                recommendations.append("📖 More regular tutoring can improve academic performance.")
+            elif extra_tutoring == "Regularly":
+                recommendations.append("✅ Regular tutoring is great! Stay consistent with your learning.")
+
+            # Bullying Experience
+            if bullying == "Frequently":
+                recommendations.append("🚨 Seek support from teachers, counselors, or trusted adults if you are experiencing bullying.")
+            elif bullying == "Occasionally":
+                recommendations.append("🤝 Talk to someone you trust about any bullying incidents and seek guidance.")
+            elif bullying == "Never":
+                recommendations.append("✅ It’s great that you haven’t experienced bullying. Always stand up for yourself and others.")
+
+            # Peer Pressure
+            if peer_pressure == "Frequently":
+                recommendations.append("⚠️ Be mindful of peer pressure. Stay true to your goals and don’t be afraid to say no.")
+            elif peer_pressure == "Occasionally":
+                recommendations.append("🛑 Be cautious of situations that might push you into making bad decisions.")
+            elif peer_pressure == "Never":
+                recommendations.append("✅ It’s great that you handle peer pressure well. Continue making positive choices.")
+
+            # Final Display
+            if recommendations:
+                for rec in recommendations:
+                    st.write(rec)
+            else:
+                st.write("✅ Keep up the good work! Stay consistent with your studies and seek continuous improvement.")
+                
+            st.write("## 📌 Subject-Specific Recommendations")
+
+            subject_recommendations = []
+
+            # Subject Performance Mapping (Every subject has a valid performance)
+            math_performance = performance["Maths"]
+            english_performance = performance["English"]
+            biology_performance = performance["Biology"]
+            physics_performance = performance["Physics"]
+            chemistry_performance = performance["Chemistry"]
+            literature_performance = performance["Lit in English"]
+            government_performance = performance["Government"]
+            CRS_performance = performance["CRS"]
+            commerce_performance = performance["Commerce"]
+            accounting_performance = performance["Accounting"]
+            economics_performance = performance["Economics"]
+
+            # Science Department Recommendations
+            if department == "Science":
+                if math_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("📊 Improve your Math skills with extra practice, as it’s crucial for science-related courses.")
+                if physics_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("🔬 Strengthen your Physics knowledge, especially if you aim for Engineering or Tech careers.")
+                if chemistry_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("⚗️ Chemistry is key in Medicine and Engineering. Consider extra tutoring.")
+                if biology_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("🧬 Biology is essential for medical and health-related fields. Revise regularly.")
+
+            # Arts Department Recommendations
+            elif department == "Arts":
+                if literature_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("📖 Enhance your Literature skills to excel in writing, journalism, and law.")
+                if government_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("🏛 Understanding Government is important for politics, law, and public administration.")
+                if CRS_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("⛪ CRS helps in moral studies and religious roles. Improve with reading and discussions.")
+
+            # Commerce Department Recommendations
+            elif department == "Commerce":
+                if accounting_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("💰 Accounting is crucial for business-related fields. Practice calculations and principles.")
+                if economics_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("📉 Economics helps in finance and business strategy. Study market trends.")
+                if commerce_performance in ["Poor", "Fair"]:
+                    subject_recommendations.append("🛍️ Commerce knowledge is key for business success. Understand trade concepts.")
+
+            # General Advice for All Departments
+            if english_performance in ["Poor", "Fair"]:
+                subject_recommendations.append("📝 English is essential for all fields. Improve writing and communication skills.")
+
+            # Display Recommendations
+            if subject_recommendations:
+                for rec in subject_recommendations:
+                    st.write(rec)
+            else:
+                st.write("✅ Keep up the good work in all subjects! Continue practicing and seeking improvements.")
+
+    # Footer
