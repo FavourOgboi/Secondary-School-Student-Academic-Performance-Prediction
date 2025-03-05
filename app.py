@@ -26,6 +26,26 @@ def predict_input(model, input_data, categorical_cols, encoder):
 
 # Streamlit UI
 st.set_page_config(page_title="Student Performance Predictor", layout="wide")
+
+# Sidebar for navigation
+st.sidebar.title("Navigation")
+
+# Home button
+home_button = st.sidebar.button("Go Back to Home")
+if home_button:
+    st.markdown('<a href="https://magical-starburst-aa756b.netlify.app/" target="_self">Go to Home</a>', unsafe_allow_html=True)
+
+# Our Team button
+our_team_button = st.sidebar.button("Back to Our Team")
+if our_team_button:
+    st.markdown('<a href="https://magical-starburst-aa756b.netlify.app/app/dataverse-html/our_team" target="_self">Go to Our Team</a>', unsafe_allow_html=True)
+
+# Insights button
+insights_button = st.sidebar.button("Back to Analysis")
+if insights_button:
+    st.markdown('<a href="https://magical-starburst-aa756b.netlify.app/app/dataverse-html/insight" target="_self">Go to Insights</a>', unsafe_allow_html=True)
+
+# Main page content
 st.title("🎓 Student Performance Predictor")
 st.write("### Enter student details to predict performance")
 
