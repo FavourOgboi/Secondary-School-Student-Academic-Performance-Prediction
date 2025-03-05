@@ -1,14 +1,17 @@
-# Student-Academic-Performance-Analysis-And-Insights
+# Student-Academic-Performance-Analysis-And-Prediction
 
 <p align="center">
   <img src="/images/student.jpeg" alt="Example Image" width="300"/>
 </p>
+
 ***
 ### TEAM DATAVERSE
 
-This project analyzes student the African student academic performance based on various factors such as foundational knowledge, study hours, and family background. The goal is to analyse students' academic success and improve educational outcomes by providing valuable insights to educators.
+This project not only analyzes the academic performance of African secondary school students based on various factors such as foundational knowledge, study hours, family background, and more but also **predicts** future academic performance. The goal is to provide valuable insights to educators and students for improved educational outcomes by leveraging machine learning models to predict student success.
 
-**NB**: NO DATA WAS GENERATED USING AI TO AVOID SKEWNESS
+We used the analysis to uncover trends and patterns, and we also built a **predictive model** that can forecast future academic achievements, helping educational institutions identify students who may need additional support.
+
+**Note**: No data was generated using AI to avoid skewness.
 
 **TEAM MEMBERS AND ROLES**
 - GIFT ZARA > DATA ANALYST
@@ -34,70 +37,14 @@ During my visits, we interviewed **100 students** who were provided with a quest
 
 ## 3. TOOLS/SKILLS UTILIZED AND ANALYST
 - EXCEL - Data Analyst Zara
-- PYTHON - Data Analst Vincent & Data Analyst Zara
-- SQLite - Data Analst Vincent
-- SQLAlchemy - Data Analyst Vincet
-- HTML - Data Analyst Vincet
-- CSS - Data Analyst Vincet
-- Bootstrap - Data Analyst Vincet
-- INLINE JS - Data Analyst Vincet
+- PYTHON - Data Analyst Vincent & Data Analyst Zara
+- SQLite - Data Analyst Vincent
+- SQLAlchemy - Data Analyst Vincent
+- HTML - Data Analyst Vincent
+- CSS - Data Analyst Vincent
+- Bootstrap - Data Analyst Vincent
+- INLINE JS - Data Analyst Vincent
 ***
-## Folder Arrangement
-
-The project folder is organized as follows:
-
-```
-Schema 
-  ├── .ipynb_checkpoints 
-  ├── create_db.ipynb 
-  ├── data_insertion_pipeline.py 
-  ├── db-test.ipynb 
-  |── student_database.db 
-  └── warehouse_schema_creation.py
-
-app 
-  ├── DataVerse-CSS │ 
-      ├── insight.css │ 
-      ├── our_team.css  
-      │ 
-      └── style.css 
-  ├── DataVerse-HTML 
-    ├── other_insight 
-        │ 
-        ├── insight.html 
-        |__ insight2.html To insight6.html Files
-  │ 
-  ├── our_team.html 
-  
-  ├── data │ 
-    ├── .ipynb_checkpoints 
-    │ 
-    ├── Survey_Form 
-    │  
-    │ ├── QUESTIONAIRE.docx 
-    │ 
-    │ 
-    ├── Raw-Student-Survey-Data.xlsx 
-    │ 
-    │ 
-    ├── processed_survey_data.csv 
-    │ 
-    │ 
-    └── processed_survey_data.xlsx 
-    ├── docs 
-    |____ A Lot of Insight PNG and JPG
-    │ 
-    └── images 
-    |_____ A lot of images
-    ├── notebook 
-    │ 
-    ├── .ipynb_checkpoints 
-    │ 
-    ├── Exploratory-data-analysis 
-    |______ 6 lot of ipynb folders for 6 diffrent insight categories, in each folder there are ipynb files
-    │     
-    └── Processing-data.ipynb
-```
 ***
 
 # Some Exploratory Data Analysis (EDA) Questions
@@ -168,7 +115,6 @@ app
 
 <img src="/docs/avgconf.png" alt="Image 3" width="1000"/>
 
-
 ### SOME INSIGHT GOTTEN
 
 **IMPACT ON GENDER:**
@@ -198,6 +144,7 @@ While some level of extracurricular participation appears beneficial, too many h
 ***
 # DASHBOARD - ANALYST ZARA
 ![Example Image](/images/dashboard.jpeg)
+
 ***
 ## Database Structuring
 
@@ -215,6 +162,7 @@ db_path = 'student_database.db'
 engine = create_engine(f'sqlite:///{db_path}')
 
 # SNIPPET
+
 ```
 ***
 ## Data Pipeline
@@ -264,6 +212,18 @@ df.to_sql('student_performance', con=engine, if_exists='replace', index=False)
 
 ```
 ***
+## Prediction Model
+
+To predict future academic performance, we developed a predictive model leveraging machine learning techniques. Specifically, we utilized the **Decision Trees & Random Forest Classifier**.
+
+The model was split into training and testing datasets, allowing us to evaluate its accuracy and performance. After training, we tested the model's predictions against real-world student outcomes to assess its effectiveness in predicting future academic success.
+
+The Random Forest model was chosen for its high accuracy and capability to handle complex, non-linear relationships between variables. The predictions made by this model can help educators identify students who may need additional support or resources, as well as forecast academic outcomes based on different factors.
+
+This predictive approach enables us to move beyond descriptive analysis, providing actionable insights that can directly inform educational strategies and interventions with an accuracy of **70%**.
+
+***
+
 ## Web Application Deployment
 
 To present the insights and predictions from the model, we deployed a web application using **Netlify**. Users can access this application to view insights based on the data collected. To assess the app, you can visit the following link: [DataVerse Web Application](https://magical-starburst-aa756b.netlify.app).
